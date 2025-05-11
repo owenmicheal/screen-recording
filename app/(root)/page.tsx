@@ -1,10 +1,13 @@
+import Header from "@/components/Header";
 import React from "react";
 
 const Page = () => {
   return (
-    <div className="text-3xl flex justify-center items-center min-h-screen font-karla">
-      Welcome to Najjicast
-    </div>
+    <main className="wrapper page">
+      <Header subHeader="Public Library" title="All Videos" />
+
+      <h1 className="test-2xl font-karla">Welcome to NajjiCast</h1>
+    </main>
   );
 };
 
