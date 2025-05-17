@@ -42,7 +42,7 @@ const Header = ({ subHeader, title, userImg }: SharedHeaderProps) => {
                 width={16}
                 height={16}
               />
-              <span>Record a video </span>
+              <span>Record Video</span>
             </button>
           </div>
         </aside>

@@ -73,11 +73,11 @@ declare interface VideoCardProps {
   id: string;
   title: string;
   thumbnail: string;
-  userImg: string;
-  username: string;
+  userImage: string;
+  userName: string;
   createdAt: Date;
   views: number;
-  visibility: Visibility;
+  visibility: string;
   duration: number | null;
 }
 
