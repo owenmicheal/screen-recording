@@ -50,7 +50,10 @@ const page = () => {
             </article>
           </section>
         </div>
-        <p>&copy; NajjiCast {new Date().getFullYear()} All rights reserved.</p>
+        <p>
+          &copy; Copyright {new Date().getFullYear()} NajjiCast. All rights
+          reserved.
+        </p>
       </aside>
 
       {/* Right Side */}
