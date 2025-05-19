@@ -2,21 +2,23 @@
 
 import FileInput from "@/components/FileInput";
 import FormField from "@/components/FormField";
-import { ChangeEvent, useState } from "react";
+import { MAX_THUMBNAIL_SIZE, MAX_VIDEO_SIZE } from "@/constants";
+import { useFileInput } from "@/lib/hooks/useFileInput";
+import { useRouter } from "next/navigation";
+import { ChangeEvent, FormEvent, useState } from "react";
 
-const page = () => {
+const UploadPage = () => {
   const [formData, setFormData] = useState({
     title: "",
     description: "",
     visibility: "public",
   });
 
-  const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState(null);
 
-  const handleInputChange = (e: ChangeEvent) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
@@ -24,8 +26,8 @@ const page = () => {
     }));
   };
 
-  const video = {};
-  const thumbnail = {};
+  const video = useFileInput(MAX_VIDEO_SIZE);
+  const thumbnail = useFileInput(MAX_THUMBNAIL_SIZE);
 
   return (
     <div className="wrapper-md upload-page">
@@ -43,7 +45,6 @@ const page = () => {
           onChange={handleInputChange}
           placeholder="Enter video title here..."
         />
-
         <FormField
           id="description"
           label="Description"
@@ -52,7 +53,6 @@ const page = () => {
           onChange={handleInputChange}
           placeholder="Describe what this video is about..."
         />
-
         <FileInput
           id="video"
           label="Video"
@@ -64,7 +64,6 @@ const page = () => {
           onReset={video.resetFile}
           type="video"
         />
-
         <FileInput
           id="thumbnail"
           label="Thumbnail"
@@ -76,7 +75,6 @@ const page = () => {
           onReset={thumbnail.resetFile}
           type="image"
         />
-
         <FormField
           id="visibility"
           label="Visibility"
@@ -89,9 +87,12 @@ const page = () => {
           onChange={handleInputChange}
           placeholder="Describe what this video is about..."
         />
+        <button type="submit" disabled={isSubmitting} className="submit-button">
+          {isSubmitting ? "Uploading..." : "Upload Video"}
+        </button>
       </form>
     </div>
   );
 };
 
-export default page;
+export default UploadPage;
