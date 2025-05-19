@@ -1,5 +1,3 @@
-import React from "react";
-
 const FormField = ({
   id,
   label,
@@ -9,14 +7,36 @@ const FormField = ({
   placeholder,
   as = "input",
   options = [],
-}: FormFieldProps) => {
-  const inputToRender =
-    as === "input" ? "input" : as === "textarea" ? "textarea" : "select";
-  return (
-    <div className="form-field">
-      <label htmlFor={id}>{label}</label>
-    </div>
-  );
-};
+}: FormFieldProps) => (
+  <div className="form-field">
+    <label htmlFor={id}>{label}</label>
+    {as === "textarea" ? (
+      <textarea
+        id={id}
+        name={id}
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+      />
+    ) : as === "select" ? (
+      <select id={id} name={id} value={value} onChange={onChange}>
+        {options.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+    ) : (
+      <input
+        type={type}
+        id={id}
+        name={id}
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+      />
+    )}
+  </div>
+);
 
 export default FormField;
