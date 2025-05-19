@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Kimbowa-Owen-s-workspace-sd1v7j.eu-central-1.xata.sh/db/najjicast",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}
