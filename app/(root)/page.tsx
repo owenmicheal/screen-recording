@@ -1,4 +1,7 @@
-import { EmptyState, Pagination, SharedHeader, VideoCard } from "@/components";
+import EmptyState from "@/components/EmptyState";
+import Pagination from "@/components/Pagination";
+import SharedHeader from "@/components/SharedHeader";
+import VideoCard from "@/components/VideoCard";
 import { getAllVideos } from "@/lib/actions/Video";
 
 const page = async ({ searchParams }: SearchParams) => {
@@ -23,8 +26,8 @@ const page = async ({ searchParams }: SearchParams) => {
               title={video.title}
               thumbnail={video.thumbnailUrl}
               createdAt={video.createdAt}
-              userImg={user?.image ?? ""}
-              username={user?.name ?? "Guest"}
+              userImage={user?.image ?? ""}
+              userName={user?.name ?? "Guest"}
               views={video.views}
               visibility={video.visibility}
               duration={video.duration}
