@@ -21,18 +21,17 @@
   --color-gray-40: rgba(58, 56, 77, 0.04);
   --color-gray-100: #6c6685;
   --color-pink-10: #ffeef5;
-  --color-pink-100: #ff4393;
-  --color-orange-100: #fe6247;
+  --color-pink-100: #10db50;
+  --color-orange-100: #00a51e;
   --text-28: 1.75rem;
   --shadow-10: 0px 6px 24px 0px rgba(0, 0, 0, 0.1);
   --shadow-15: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
   --shadow-20: 0px 10px 30px 0px rgba(0, 0, 0, 0.2);
-  --shadow-inset-20:
-    0px 10px 40px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 1px #d7d5dd inset;
+  --shadow-inset-20: 0px 10px 40px 0px rgba(0, 0, 0, 0.2),
+    0px 0px 0px 1px #d7d5dd inset;
   --radius-20: 20px;
   --radius-18: 18px;
-  --background-image-radial-100:
-    radial-gradient(
+  --background-image-radial-100: radial-gradient(
       79.36% 59.94% at 101.94% -1.83%,
       #ffe5f0 0%,
       #fff 42%,

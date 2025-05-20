@@ -13,7 +13,7 @@ const NavBar = () => {
       <nav>
         <Link href="/">
           <Image
-            src="/assets/icons/logo.svg"
+            src="/assets/icons/logo.png"
             alt="NajjiCast Logo"
             width={32}
             height={32}

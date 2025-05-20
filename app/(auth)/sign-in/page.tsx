@@ -14,7 +14,7 @@ const page = () => {
       <aside className="testimonial">
         <Link href="/">
           <Image
-            src="/assets/icons/logo.svg"
+            src="/assets/icons/logo.png"
             alt="logo"
             width={33}
             height={33}
@@ -67,7 +67,7 @@ const page = () => {
         <section>
           <Link href="/">
             <Image
-              src="/assets/icons/logo.svg"
+              src="/assets/icons/logo.png"
               alt="logo"
               width={40}
               height={40}
