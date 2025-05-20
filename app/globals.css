@@ -14,13 +14,13 @@
 
 @theme {
   --color-blue-100: #2c325d;
-  --color-light-100: #fff8fb;
+  --color-light-100: #ebfff1;
   --color-dark-100: #212121;
   --color-gray-20: rgba(108, 102, 133, 0.2);
   --color-gray-25: rgba(108, 102, 133, 0.25);
   --color-gray-40: rgba(58, 56, 77, 0.04);
   --color-gray-100: #6c6685;
-  --color-pink-10: #ffeef5;
+  --color-pink-10: #cffcdc;
   --color-pink-100: #10db50;
   --color-orange-100: #00a51e;
   --text-28: 1.75rem;
@@ -33,13 +33,13 @@
   --radius-18: 18px;
   --background-image-radial-100: radial-gradient(
       79.36% 59.94% at 101.94% -1.83%,
-      #ffe5f0 0%,
+      #ebfff1 0%,
       #fff 42%,
       rgba(0, 0, 0, 0) 42%
     ),
     radial-gradient(
       60.29% 53.62% at 0% 100%,
-      #ffd8e9 0%,
+      #d7fae1 0%,
       #fff 42%,
       rgba(0, 0, 0, 0) 42%
     );
