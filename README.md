@@ -1,6 +1,6 @@
 ![Screen Recording App](public/assets/images/readme.png)
 
-# Screen Recording App
+# NajjiCast - Screen Recording and Video Sharing App
 
 ## Project Description
 
