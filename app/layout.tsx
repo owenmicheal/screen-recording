@@ -10,9 +10,9 @@ const geistKarla = Karla({
 
 export const metadata: Metadata = {
   title: "NajjiCast",
-  description: "A Screen Sharing App",
+  description: "A Screen Recording and Video Sharing App",
   icons: {
-    icon: "/assets/icons/logo.svg",
+    icon: "/assets/icons/logo.png",
   },
 };
 
