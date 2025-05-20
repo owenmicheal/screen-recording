@@ -1,7 +1,9 @@
 "use client";
-
 import Image from "next/image";
+import ImageWithFallback from "./ImageWithFallback";
 import Link from "next/link";
+import { useState } from "react";
+import { username } from "better-auth/plugins";
 
 const VideoCard = ({
   id,
@@ -14,23 +16,35 @@ const VideoCard = ({
   visibility,
   duration,
 }: VideoCardProps) => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+    navigator.clipboard.writeText(`${window.location.origin}/video/${id}`);
+    setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+    }, 3000);
+  };
+
   return (
     <Link href={`/video/${id}`} className="video-card">
       <Image
         src={thumbnail}
-        alt="thumbnail"
         width={290}
         height={160}
+        alt="thumbnail"
         className="thumbnail"
       />
       <article>
         <div>
           <figure>
-            <Image
+            <ImageWithFallback
               src={userImage}
-              alt="avatar"
               width={34}
               height={34}
+              alt="avatar"
               className="rounded-full aspect-square"
             />
             <figcaption>
@@ -45,22 +59,24 @@ const VideoCard = ({
               width={16}
               height={16}
             />
-            <span>{views} </span>
+            <span>{views}</span>
           </aside>
         </div>
         <h2>
           {title} -{" "}
-          {createdAt.toLocaleDateString("en-Us", {
+          {createdAt.toLocaleDateString("en-US", {
             year: "numeric",
             month: "short",
             day: "numeric",
           })}
         </h2>
       </article>
-      <button onClick={() => {}} className="copy-btn">
+      <button onClick={handleCopy} className="copy-btn">
         <Image
-          src="/assets/icons/link.svg"
-          alt="link icon"
+          src={
+            copied ? "/assets/icons/checkmark.svg" : "/assets/icons/link.svg"
+          }
+          alt="Copy Link"
           width={18}
           height={18}
         />
