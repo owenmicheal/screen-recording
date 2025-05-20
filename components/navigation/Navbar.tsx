@@ -1,9 +1,11 @@
 "use client";
 
-import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect, useRouter } from "next/navigation";
+
+import { authClient } from "@/lib/auth-client";
+import ImageWithFallback from "../ImageWithFallback";
 
 const NavBar = () => {
   const router = useRouter();
@@ -17,18 +19,18 @@ const NavBar = () => {
           <Image
             src="/assets/icons/logo.png"
             alt="NajjiCast Logo"
-            width={32}
-            height={32}
+            width={34}
+            height={34}
           />
           <h1>NajjiCast</h1>
         </Link>
 
         {user && (
           <figure>
-            <button onClick={() => router.push("/profile/333")}>
-              <Image
-                src="/assets/images/dummy.jpg"
-                alt="User Icon"
+            <button onClick={() => router.push(`/profile/${session?.user.id}`)}>
+              <ImageWithFallback
+                src={session?.user.image ?? ""}
+                alt="User"
                 width={36}
                 height={36}
                 className="rounded-full aspect-square"
