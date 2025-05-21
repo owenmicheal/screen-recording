@@ -42,16 +42,16 @@ const page = () => {
             </p>
             <article>
               <Image
-                src="/assets/images/nalwoga.jpg"
-                alt="nalwoga"
+                src="/assets/images/owen.png"
+                alt="owen"
                 width={64}
                 height={64}
                 className="rounded-full aspect-square"
               />
 
               <div>
-                <h3>Nalwoga Sandra</h3>
-                <p>Software Engineer | Najjisoft</p>
+                <h3>Kimbowa Owen</h3>
+                <p>Software Engineer | OceanzHub</p>
               </div>
             </article>
           </section>
