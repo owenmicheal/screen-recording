@@ -42,7 +42,7 @@ const page = () => {
             </p>
             <article>
               <Image
-                src="/assets/images/owen.png"
+                src="/assets/images/nalwoga.jpg"
                 alt="owen"
                 width={64}
                 height={64}
@@ -50,8 +50,8 @@ const page = () => {
               />
 
               <div>
-                <h3>Kimbowa Owen</h3>
-                <p>Software Engineer | OceanzHub</p>
+                <h3>Nalwoga Sandra</h3>
+                <p>Software Engineer | Najjisoft</p>
               </div>
             </article>
           </section>
